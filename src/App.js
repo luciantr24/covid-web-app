@@ -42,22 +42,16 @@ class App extends React.Component{
             <div className = {styles.container}>
                
                <div className = {styles.headerText}>
-                <h1>COVID-19 Real Data</h1>   
-                </div> 
-
+                 <h1>COVID-19 Real Time Data</h1>   
+               </div> 
                <br></br> 
 
                <Cards data = {data}/>
-
                <BarChart data = {data}/> 
-             
                <br></br>
                <CountryPicker handleCountryChange={this.handleCountryChange} />
                <Chart data={data} country={country} /> 
-
-                <br></br>
-
-               
+                <br></br> 
             </div>
         );
     }

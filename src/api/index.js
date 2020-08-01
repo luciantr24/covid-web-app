@@ -6,25 +6,13 @@ export const fetchData = async (country) =>{
 
     let changeableUrl = url;
 
-    //we can call the fetch data by with a parameter (country)
     if(country){
         changeableUrl =  `${url}/countries/${country}`;
     }
 
-    try{
-        // const res = await axios.get(url);
-
-        // return res;
-
-        // console.log(res);
-
-        //get the changeableUrl
+    try
+    {        
         const { data: {confirmed, recovered, deaths, lastUpdate}} = await axios.get(changeableUrl);
-
-        // const modifiedData = {confirmed,
-        //                       recovered, 
-        //                       deaths, 
-        //                       lastUpdate}; //we can store the data in another array but we can simplify the process by returning all of them 
 
         return {confirmed,
                 recovered, 
